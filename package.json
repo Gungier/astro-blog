@@ -19,6 +19,7 @@
     "@react-three/fiber": "^8.15.15",
     "@types/three": "^0.160.0",
     "astro": "^4.2.7",
+    "react-dom": "^18.2.0",
     "react-three-fiber": "^6.0.13",
     "tailwindcss": "^3.4.1",
     "three": "^0.160.1",
