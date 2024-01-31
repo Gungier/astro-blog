@@ -1,0 +1,20 @@
+---
+interface SocialProps {
+  platform: string;
+  username: string;
+}
+const { platform, username } = Astro.props as SocialProps;
+---
+
+<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+
+<style>
+    a {
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        background-color: #b6aee2;
+        text-dcoration: none;
+        border-radius: 0.5rem;
+        justify-content: flex-start;
+    }
+</style>

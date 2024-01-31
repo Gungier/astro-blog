@@ -1,4 +1,18 @@
 ---
+import '../styles/global.css';
+import Footer from "../components/Footer.astro";
+import Header from '../components/Header.astro';
+
+const pageTitle = 'My Astro Learning Blog';
+---
+
+<body>
+    <Header />
+
+    <h1>{pageTitle}</h1>
+    <Footer />
+</body>
+<!-- ---
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -110,4 +124,4 @@ const posts = (await getCollection('blog')).sort(
 		</main>
 		<Footer />
 	</body>
-</html>
+</html> -->
