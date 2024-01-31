@@ -1,7 +1,7 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import '../styles/global.css';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
 
 const pageTitle = "About Me";
 
@@ -14,46 +14,32 @@ interface Identity {
 }
 
 const identity: Identity = {
-  firstName: "Gabe",
-  lastName: "Ungier",
-  country: "USA",
-  occupation: "Software Engineer",
+  firstName: "Lila",
+  lastName: "Mendelsohn",
+  country: "Denmark",
+  occupation: "Student",
   hobbies: [
-    "reading",
-    "writing",
-    "coding",
-    "gaming",
-    "cooking",
-    "baking",
-    "hiking",
-    "camping",
-    "traveling",
-    "learning",
-    "teaching",
-    "mentoring",
-    "volunteering",
-    "giving back",
-    "helping others",
-    "making the world a better place",
+    "Writing",
+    "Singing",
+    "Acting",
+    "Song Writng",
+    "Playing Guitar",
+    "Lego Building",
+    "Reading",
+    "Listing to Music",
+    "Talking about Myself",
   ],
 };
 
-const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Typescript",
-  "React",
-  "Hopefully Astro Soon!",
-];
+const skills = ["Writing", "Singing & Acting", "Martial Arts"];
 
 const happy: boolean = true;
 const finished: boolean = false;
 const goal: number = 3;
 
-const skillColor = 'navy';
-const fontWeight = 'bold';
-const textCase = 'uppercase';
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
 // if (goal !== 3) {
 //   return null
 // }else {
@@ -65,7 +51,6 @@ const textCase = 'uppercase';
 //     </>
 //   );
 // }
-
 ---
 
 <html lang="en">
@@ -73,23 +58,23 @@ const textCase = 'uppercase';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
-    <style define:vars={{skillColor, fontWeight, textCase}}>
-        h1 {
-            color: purple;
-            font-size: 4rem;
-        }
-        .skill {
-            /* color: green; */
-            color: var(--skillColor);
-            font-weight: var(--fontWeight);
-            text-transform: var(--textCase);
-        }
+    <style define:vars={{ skillColor, fontWeight, textCase }}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+        /* color: green; */
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+      }
     </style>
   </head>
   <body>
     <Header />
     <h1>{pageTitle}</h1>
-    <h2>... and my new Astro site!</h2>
+    <h2>... Marvel at the world, which is for all of us to share!</h2>
 
     <p>Here's some stuff abpout me!</p>
     <ul>
@@ -109,7 +94,7 @@ const textCase = 'uppercase';
       {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
 
-    {happy && <p>I am happy to be learning Astro!</p>}
+    <!-- {happy && <p>I am happy to be learning Astro!</p>} -->
     {finished && <p>I have finished this tutorial!</p>}
     {
       goal === 3 ? (
