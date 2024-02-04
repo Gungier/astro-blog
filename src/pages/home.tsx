@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Canvas, extend, useThree } from "react-three-fiber";
+import { Canvas, extend, useThree } from '@react-three/fiber';
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { TextureLoader } from "three";
 
