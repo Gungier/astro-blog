@@ -1,25 +1,68 @@
 ---
-
+import HomeIcon from "../components/Icon/Home.astro";
+import AboutIcon from "../components/Icon/About.astro";
+import ReadingIcon from "../components/Icon/Reading.astro";
+import BookSearchIcon from "../components/Icon/BookSearch.astro";
 ---
 
-<div
-  class="flex flex-row m-0 pr-[120px] h-13 min-h-13 items-center justify-between border-0"
->
-  <div class="flex-1 flex flex-row flex-nowrap items-center"></div>
-  <div class="flex flex-row w-6/12 px-4">
-    <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    </div>
-  </div>
+<div id="navContainer" class="navigation fixed top-1/4 bottom-1/4 right-0 flex flex-col rounded px-4 items-end justify-center shadow-lg bg-purple-500 transform -tranlate-y-1/2" style="box-shadow: -4px 0 8px -3px rgba(0, 0, 0, 0.1), 0 8px 8px -3px rgba(0, 0, 0, 0.1);">
+  <button id="navToggle" class="mt-2">
+    <span id="hamburgerIcon">&#9776;</span>
+    <span id="chevronIcon" class="hidden">&gt;</span>
+  </button>
+  <!-- Home icon link -->
+  <a href="/" class="icon-link icon mt-2" id="homeIconLink">
+    <HomeIcon />
+  </a>
+
+  <!-- About icon link -->
+  <a href="/about/" class="icon-link icon mt-2" id="aboutIconLink">
+    <AboutIcon />
+  </a>
+
+  <!-- Reading icon link -->
+  <a href="/blog/" class="icon-link icon mt-2" id="blogIconLink">
+    <ReadingIcon />
+  </a>
+  <!-- Search icon link -->
+  <a href="/" class="icon-link icon mt-2" id="searchIconLink">
+    <BookSearchIcon />
+  </a>
+
+  <!-- Text links -->
+  <a id="homeLink" href="/" class="link flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">Home</a>
+  <a id="aboutLink" href="/about/" class="link flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">About</a>
+  <a id="blogLink" href="/blog/" class="link flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">Blog</a>
+  <a id="searchLink" href="/" class="link flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">Search</a>
 </div>
 
-<!-- <style>
-    a {
-        margin: 1rem;
-        justify-content: center;
-        align-items: right;
+<!-- JavaScript -->
+<script>
+  document.getElementById("navToggle")?.addEventListener("click", function() {
+  const container = document.getElementById("navContainer");
+  const isExpanded = container?.classList.contains("max-w-xs");
 
-    }
-</style> -->
+  container?.classList.toggle("max-w-xs", !isExpanded);
+  container?.classList.toggle("max-w-32", isExpanded); // Adjusted for collapsed state
+
+  // Select both icon links and text links
+  const iconLinks = container?.querySelectorAll(".icon-link");
+  const textLinks = container?.querySelectorAll(".link");
+
+  if (isExpanded) {
+    // Show icon links, hide text links
+    iconLinks?.forEach(link => link.classList.add("hidden"));
+    textLinks?.forEach(link => link.classList.remove("hidden"));
+  } else {
+    // Hide icon links, show text links
+    iconLinks?.forEach(link => link.classList.remove("hidden"));
+    textLinks?.forEach(link => link.classList.add("hidden"));
+  }
+
+  // Toggle hamburger and chevron icons
+  document.getElementById("hamburgerIcon")?.classList.toggle("hidden", isExpanded);
+  document.getElementById("chevronIcon")?.classList.toggle("hidden", !isExpanded);
+});
+
+
+</script>

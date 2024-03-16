@@ -1,26 +1,15 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import '../styles/global.css';
-import ThreeDEarth from './_Rotation';
-
-const pageTitle = 'Home Page';
+// index.astro or any other page
+import Layout from '../layouts/Layout.astro';
+import ThreeDEarth from '../components/ui/_Rotation.tsx'; // Import React component
+import Scene from '../components/ui/FullEarthRotation.tsx';
+import StaryBackground from '../components/ui/StaryBackground.tsx';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 {pageTitle}</h1>
-			<ThreeDEarth client:only />
-		</main>
-		<Footer>
-	</body>
-</html>
-./Rotation./_Rotation
+<Layout class="text-white" title="Home">
+  <!-- Here you can include your React component -->
+  <!-- <StaryBackground client:load /> -->
+  <ThreeDEarth client:load />
+
+  <!-- <Scene client:load /> -->
+</Layout>

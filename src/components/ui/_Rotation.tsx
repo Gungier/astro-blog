@@ -26,7 +26,7 @@ const Earth = () => {
   const meshRef = useRef<THREE.Mesh>(null!);
 
   // Load Earth texture
-  const texture = new TextureLoader().load("/earth.png");
+  const texture = new TextureLoader().load("/public/eastHemi.jpg");
 
   return (
     <mesh ref={meshRef}>
@@ -39,15 +39,13 @@ const Earth = () => {
 const ThreeDEarth: React.FC = () => {
   return (
     <div data-component="3d-earth-container">
-      <Canvas
+       <Canvas
         style={{
           position: "relative",
           borderRadius: "100%",
           height: "50vh",
           width: "50vh",
-          marginLeft: "28rem",
-        //   marginTop: "4rem",
-          // boxShadow: "hsla(244, 98%, 48%, 0.998) inset 0 0 40px",
+          // Removed marginLeft to allow centering by parent
         }}>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
