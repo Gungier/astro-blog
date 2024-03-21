@@ -1,15 +1,20 @@
 ---
 // index.astro or any other page
-import Layout from '../layouts/Layout.astro';
-import ThreeDEarth from '../components/ui/_Rotation.tsx'; // Import React component
-import Scene from '../components/ui/FullEarthRotation.tsx';
-import StaryBackground from '../components/ui/StaryBackground.tsx';
+import Layout from "../layouts/Layout.astro";
+import Main from "../layouts/Main.astro";
+import ThreeDEarth from "../components/ui/_Rotation.tsx"; // Import React component
+import Scene from "../components/ui/FullEarthRotation.tsx";
+import StaryBackground from "../components/ui/StaryBackground.tsx";
 ---
 
-<Layout class="text-white" title="Home">
-  <!-- Here you can include your React component -->
-  <!-- <StaryBackground client:load /> -->
-  <ThreeDEarth client:load />
+<Layout description="A community for sharing culture" title="Home">
+  <Main>
+    <StaryBackground client:load />
+    <!-- Here you can include your React component -->
+    <section class="flex-grow flex justify-center items-center md:(flex px-10)">
+      <ThreeDEarth client:load />
+    </section>
 
-  <!-- <Scene client:load /> -->
+    <!-- <Scene client:load /> -->
+  </Main>
 </Layout>

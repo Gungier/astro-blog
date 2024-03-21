@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Canvas, extend, useThree } from '@react-three/fiber';
+import { Canvas, extend, useThree } from "@react-three/fiber";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { TextureLoader } from "three";
 
@@ -39,13 +39,18 @@ const Earth = () => {
 const ThreeDEarth: React.FC = () => {
   return (
     <div data-component="3d-earth-container">
-       <Canvas
+      <Canvas
         style={{
           position: "relative",
-          borderRadius: "100%",
           height: "50vh",
           width: "50vh",
-          // Removed marginLeft to allow centering by parent
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minWidth: "25vw",
+          minHeight: "25vh",
+          marginLeft: "36px",
+          marginTop: "36px",
         }}>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />

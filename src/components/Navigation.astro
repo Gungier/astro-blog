@@ -5,35 +5,35 @@ import ReadingIcon from "../components/Icon/Reading.astro";
 import BookSearchIcon from "../components/Icon/BookSearch.astro";
 ---
 
-<div id="navContainer" class="navigation fixed top-1/4 bottom-1/4 right-0 flex flex-col rounded px-4 items-end justify-center shadow-lg bg-purple-500 transform -tranlate-y-1/2" style="box-shadow: -4px 0 8px -3px rgba(0, 0, 0, 0.1), 0 8px 8px -3px rgba(0, 0, 0, 0.1);">
-  <button id="navToggle" class="mt-2">
-    <span id="hamburgerIcon">&#9776;</span>
-    <span id="chevronIcon" class="hidden">&gt;</span>
+<div id="navContainer" class="navigation fixed top-1/3 bottom-1/3 right-0 flex flex-col rounded px-4 items-end justify-center shadow-lg md:flex md:flex-col md:items-end max-sm:(top-0 right-0) hidden bg-purple-500">
+  <button id="navToggle" class="mt-2 py-3 flex-nowrap w-fit whitespace-nowrap items-center justify-center">
+    <span id="hamburgerIcon" class="mr-2">&#9776;</span>
+    <span id="chevronIcon" class="hidden items-start justifiy-start">&gt;</span>
   </button>
   <!-- Home icon link -->
-  <a href="/" class="icon-link icon mt-2" id="homeIconLink">
+  <a href="/" class="icon-link icon mt-2 pb-2" id="homeIconLink">
     <HomeIcon />
   </a>
 
   <!-- About icon link -->
-  <a href="/about/" class="icon-link icon mt-2" id="aboutIconLink">
+  <a href="/about/" class="icon-link icon mt-2 pb-2" id="aboutIconLink">
     <AboutIcon />
   </a>
 
   <!-- Reading icon link -->
-  <a href="/blog/" class="icon-link icon mt-2" id="blogIconLink">
+  <a href="/blog/" class="icon-link icon mt-2 pb-2" id="blogIconLink">
     <ReadingIcon />
   </a>
   <!-- Search icon link -->
-  <a href="/" class="icon-link icon mt-2" id="searchIconLink">
+  <a href="/" class="icon-link icon mt-2 pb-2" id="searchIconLink">
     <BookSearchIcon />
   </a>
 
   <!-- Text links -->
-  <a id="homeLink" href="/" class="link flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">Home</a>
-  <a id="aboutLink" href="/about/" class="link flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">About</a>
-  <a id="blogLink" href="/blog/" class="link flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">Blog</a>
-  <a id="searchLink" href="/" class="link flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">Search</a>
+  <a id="homeLink" href="/" class="link mt-2 pb-2 flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">Home</a>
+  <a id="aboutLink" href="/about/" class="link mt-2 pb-2 flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">About</a>
+  <a id="blogLink" href="/blog/" class="link mt-2 pb-2 flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">Blog</a>
+  <a id="searchLink" href="/" class="link mt-2 pb-2 flex-nowrap w-fit whitespace-nowrap items-center justify-center font-bold text-center hidden">Search</a>
 </div>
 
 <!-- JavaScript -->
