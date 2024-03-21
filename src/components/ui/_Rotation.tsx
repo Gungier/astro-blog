@@ -26,7 +26,7 @@ const Earth = () => {
   const meshRef = useRef<THREE.Mesh>(null!);
 
   // Load Earth texture
-  const texture = new TextureLoader().load("/eastHemi.jpg");
+  const texture = new TextureLoader().load("/earth_noClouds.0330.jpg");
 
   return (
     <mesh ref={meshRef}>
