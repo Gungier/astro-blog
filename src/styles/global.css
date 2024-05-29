@@ -1,4 +1,4 @@
-:root {
+/* :root {
   
   font-size: 16px;
   line-height: 1.75rem;
@@ -9,7 +9,28 @@
     rgba(34, 195, 188, 1) 0%,
     rgba(191, 45, 253, 0.5830926120448179) 100%
   );
+} */
+:root {
+  font-size: 16px;
+  line-height: 1.75rem;
+  letter-spacing: 0.1rem;
+  background: rgb(34, 195, 188);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 195, 188, 1) 0%,
+    rgba(191, 45, 253, 0.583) 100%
+  );
 }
+
+html, body {
+  background: transparent;
+  /* background: linear-gradient(
+    0deg,
+    rgba(34, 195, 188, 1) 0%,
+    rgba(191, 45, 253, 0.583) 100%
+  ); */
+}
+
 
 /* #content {
   margin-top: 6rem;
@@ -50,22 +71,22 @@
 
 #textColor::before {
   font-weight: bold;
-  background: rgb(87, 6, 249);
+  background: rgb(6, 208, 249);
   background: linear-gradient(
     0deg,
-    rgba(87, 6, 249, 1) 0%,
-    rgb(158, 161, 165) 100%
+    rgba(6, 208, 249, 1) 0%,
+    rgb(125, 5, 238) 100%
   );
   z-index: -1;
 }
 
 #textColor {
   font-weight: bold;
-  background: rgb(87, 6, 249);
+  background: rgb(6, 208, 249);
   background: linear-gradient(
     0deg,
-    rgba(6, 75, 148, 1) 0%,
-    rgba(87, 6, 249, 1) 100%
+    rgba(125, 5, 238, 1) 0%,
+    rgba(6, 208, 249, 1) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,16 +96,17 @@
 
 #aboutMe {
   font-weight: bold;
-  background: rgb(0, 0, 0);
+  background: rgb(34, 195, 188);
   background: linear-gradient(
     0deg,
-    rgb(105, 30, 30) 0%,
-    rgba(69, 45, 184, 1) 85%
+    rgba(34, 195, 188, 1) 0%,
+    rgba(191, 45, 253, 0.583) 100%
   );
 
   color: transparent;
   background-clip: text;
 }
+
 
 .Navbar {
   position: fixed;
@@ -102,7 +124,7 @@
   justify-content: center;
   flex-grow: 1;
   font-weight: bold;
-  /* background: rgb(137, 6, 148); */
+  background: rgb(137, 6, 148);
   background: linear-gradient(0deg, rgba(137, 6, 148, 1) 0%, rgba(87, 6, 249, 1) 100%);
   background-clip: text;
   z-index: 20;

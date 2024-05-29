@@ -1,19 +1,12 @@
 ---
-// Layout.astro
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 // import Navigation from "../components/Navigation.astro";
 // import { HoveredLink } from "../components/ui/NavBar";
 import Main from "../layouts/Main.astro";
 import StaryBackground from "../components/ui/StaryBackground";
-import type { Code } from "astro:components";
 import {
   Astronav,
   MenuItems,
   MenuIcon,
-  Dropdown,
-  DropdownItems,
-  DropdownSubmenu,
 } from "astro-navbar";
 import "../styles/global.css";
 ---
@@ -26,42 +19,36 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <!-- <title class="text-3xl">{title}</title> -->
   </head>
-  <body id="root" >
-    <!-- <div id="textColor"> -->
-    <Main>
-      <!-- <Header /> -->
-      <!-- <div id="content"> -->
-      <!-- <slot /> -->
-      <!-- <header
-        
-      > -->
+  <body id="root">
+    <div id="textColor">
+      <Main>
+        <!-- <div id="content"> -->
+        <!-- <slot /> -->
+
         <!-- <Navigation /> -->
         <!-- <HoveredLink client:only /> -->
         <!-- <header class="lg:flex justify-between p-5 gap-5 mx-auto container"> -->
-          <!-- <div class="flex flex-grow sticky right-0" > -->
-            <Astronav closeOnClick>
-    <div class="flex w-full lg:w-auto justify-between">
-      <!-- <a>Your Logo</a> -->
-      <div class="block lg:hidden">
-        <MenuIcon class="w-4 h-4 text-gray-800" />
-      </div>
-    </div>
-    <MenuItems class="Navbar hidden lg:flex">
-      <!-- <MenuItems class="Navbar" id="navbar" >-->
-            
-          
-            <div id="textColor" >
-              <ul >
+        <!-- <div class="hamburger" id="hamburger"> -->
+        <Astronav closeOnClick>
+          <div class="flex w-full lg:w-auto justify-between">
+            <!-- <a>Your Logo</a> -->
+            <div class="block lg:hidden">
+              <MenuIcon class="w-4 h-4 text-gray-800" />
+            </div>
+          </div>
+          <MenuItems class="Navbar hidden lg:flex">
+            <div id="textColor">
+              <ul>
                 <li>
                   <a href="/">Home</a>
                 </li>
                 <li>
-                  <button >
+                  <button>
                     <a href="about">About</a>
                   </button>
                 </li>
                 <li>
-                  <button >
+                  <button>
                     <a href="blog">Blog</a>
                   </button>
 
@@ -72,14 +59,14 @@ import "../styles/global.css";
               </ul>
             </div>
           </MenuItems>
-  </Astronav>
-          <!-- </div> -->
+        </Astronav>
+        <!-- </div> -->
         <!-- <Astronav closeOnClick> -->
-          <!-- <section class="Navbar"> -->
-          <!-- <MenuItems class="Navbar" id="navbar"
+        <!-- <section class="Navbar"> -->
+        <!-- <MenuItems class="Navbar" id="navbar"
             
           > -->
-            <!-- <div id="textColor" >
+        <!-- <div id="textColor" >
               <ul >
                 <li>
                   <a href="/">Home</a>
@@ -100,14 +87,13 @@ import "../styles/global.css";
                 </li>
               </ul>
             </div> -->
-          <!-- </MenuItems> -->
+        <!-- </MenuItems> -->
 
-          
-          <!-- </section> -->
+        <!-- </section> -->
         <!-- </Astronav> -->
-      <!-- </header> -->
-    </Main>
-    <!-- </div> -->
+        <!-- </header> -->
+      </Main>
+    </div>
     <!-- <script src="../utils/navToggle.ts"></script> -->
   </body>
 </html>

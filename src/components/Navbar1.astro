@@ -1,15 +1,6 @@
 ---
 import { Astronav, MenuItems } from "astro-navbar";
 import Main from "../layouts/Main.astro";
-
-const toggleMenu = (): void => document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const navbar = document.getElementById('navbar');
-
-  hamburger.addEventListener('click', () => {
-    navbar.classList.toggle('open');
-  });
-});
 ---
 
 <!doctype html>
@@ -33,7 +24,7 @@ const toggleMenu = (): void => document.addEventListener('DOMContentLoaded', () 
                 </button>
               <span>&#9776;</span>
             </div> -->
-            <MenuItems class="Navbar hidden lg:flex" id="navbar">
+            <MenuItems class="Navbar hidden lg:flex">
               <div id="textColor">
                 <ul class="flex flex-col lg:flex-row lg:gap-5">
                   <li><a href="/">Home</a></li>
