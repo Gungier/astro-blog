@@ -1,14 +1,3 @@
-<!-- {
-	title: "About Me",
-	description: "",
-	published: '',
-	edited: '',
-	tags: [""],
-	license: '',
-	collection: "",
-	order: 1
-} -->
-
 ## Hey! welcome to my **[WebStite!!](/)**
 
 ### My name is Lila and I am an IB student living in Aarhus, Denmark.
