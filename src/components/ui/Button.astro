@@ -1,0 +1,14 @@
+---
+// Define the props that the component accepts
+interface ButtonProps {
+  label: string;
+  colorClass?: string;
+  icon?: string; // This will be the icon class or path depending on what icon system you use
+}
+const { label, colorClass, icon } = Astro.props;
+---
+
+<button class={`bg-${colorClass}-900 hover:bg-${colorClass}-700 text-white font-bold py-2 px-4 rounded inline-flex items-center border-2 border-${colorClass}-900`}>
+  {icon ? <img src={icon} class="fill-current w-4 h-4 mr-2" /> : null}
+  {label}
+</button>

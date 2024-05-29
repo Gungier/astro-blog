@@ -1,39 +1,18 @@
 ---
-// Layout.astro
-import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
+import Main from "./Main.astro";
 import Header from "../components/Header.astro";
-import Navigation from "../components/Navigation.astro";
-import Main from "../layouts/Main.astro";
-import StaryBackground from "../components/ui/StaryBackground";
-import type { Code } from "astro:components";
-// Import other components if necessary
-
-interface Props {
-  title: string;
-  description?: string;
-  image?: string;
-}
-
-const {
-  title,
-  description = "A community for sharing culture",
-  image = "/public/images/globalTales.jpg",
-} = Astro.props;
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <title class="text-3xl text-white font-bold">{title}</title>
-  </head>
-  <body class="min-h-screen bg-black">
+    <title>My Homepage</title>
     <Main>
       <Header />
-      <slot />
-      <Navigation />
+    <ViewTransitions />
     </Main>
+  </head>
+  <body>
+    <slot />
   </body>
 </html>

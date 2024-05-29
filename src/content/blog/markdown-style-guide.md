@@ -101,7 +101,9 @@ we can use 3 backticks ``` in new line and write snippet and close with 3 backti
 ```html
 <!doctype html>
 <html lang="en">
+  
   <head>
+    <meta http-equiv="Content-Language" content="en">
     <meta charset="utf-8" />
     <title>Example HTML5 Document</title>
   </head>
@@ -117,7 +119,9 @@ Output
 ```html
 <!doctype html>
 <html lang="en">
+  
   <head>
+    <meta http-equiv="Content-Language" content="en">
     <meta charset="utf-8" />
     <title>Example HTML5 Document</title>
   </head>

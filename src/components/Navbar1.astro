@@ -1,0 +1,62 @@
+---
+import { Astronav, MenuItems } from "astro-navbar";
+import Main from "../layouts/Main.astro";
+
+const toggleMenu = (): void => document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const navbar = document.getElementById('navbar');
+
+  hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+  });
+});
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="A community for sharing culture" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Tales</title>
+    <link rel="stylesheet" href="../styles/global.css">
+  </head>
+  <body id="root">
+    <Main>
+      <slot />
+      <header>
+        <Astronav closeOnClick>
+          <!-- <div class="flex justify-between items-center w-full lg:w-auto">
+            <div class="hamburger" id="hamburger">
+                <button onclick={() => toggleMenu()}>
+
+                </button>
+              <span>&#9776;</span>
+            </div> -->
+            <MenuItems class="Navbar hidden lg:flex" id="navbar">
+              <div id="textColor">
+                <ul class="flex flex-col lg:flex-row lg:gap-5">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="about">About</a></li>
+                  <li><a href="blog">Blog</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </MenuItems>
+          </div>
+        </Astronav>
+      </header>
+    </Main>
+    <script >
+//     const toggleMenu = () => document.addEventListener('DOMContentLoaded', () => {
+//   const hamburger = document.getElementById('hamburger');
+//   const navbar = document.getElementById('navbar');
+
+//   hamburger.addEventListener('click', () => {
+//     navbar.classList.toggle('open');
+//   });
+// });
+
+    </script>
+  </body>
+</html>
