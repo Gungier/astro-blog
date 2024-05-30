@@ -1,3 +1,16 @@
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+pubDate: 2022-07-01
+description: 'This is the first post of my new Astro blog.'
+image:
+    url: 'https://docs.astro.build/assets/full-logo-light.png'
+    alt: 'The full Astro logo.'
+tags: ["astro", "blogging", "learning in public"]
+
+title: "About The Site"
+author: "Lila Mendelsohn"
+---
+
 ## Hey! welcome to my **[WebStite!!](/)**
 
 ### My name is Lila and I am an IB student living in Aarhus, Denmark.

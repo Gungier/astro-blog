@@ -1,0 +1,17 @@
+---
+import NavBar from "../components/NavBar.astro";
+import Layout from "./Layout.astro";
+import Main from "./Main.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<main class="container"></main>
+<Layout>
+    <Main>
+<h1>{frontmatter.title}</h1>
+<p>Written by {frontmatter.author}</p>
+<NavBar />
+<slot />
+</Main>
+</Layout>
