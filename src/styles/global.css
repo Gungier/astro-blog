@@ -29,10 +29,13 @@
     rgba(34, 195, 188, 1) 0%,
     rgba(191, 45, 253, 0.583) 100%
   );
+  height: 100%;
 }
 
 html, body {
   background: transparent;
+  font-family: 'Lato', sans-serif;
+  height: 100%;
   /* background: linear-gradient(
     0deg,
     rgba(34, 195, 188, 1) 0%,
@@ -181,6 +184,8 @@ html, body {
 body {
   margin: 0 auto;
   width: 100%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
   max-width: 80ch;
   padding: 1rem;
   line-height: 1.5;
