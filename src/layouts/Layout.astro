@@ -2,13 +2,21 @@
 import { ViewTransitions } from "astro:transitions";
 import Main from "./Main.astro";
 import Header from "../components/Header.astro";
+
+const { title } = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <title>My Homepage</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    </head>
     <Main>
       <Header />
+      <h1 class="font-bold inset-x-0 text-3xl">{title}</h1>
     <ViewTransitions />
     </Main>
   </head>

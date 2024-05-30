@@ -9,8 +9,13 @@ const { frontmatter } = Astro.props;
 <main class="container"></main>
 <Layout>
     <Main>
-<h1>{frontmatter.title}</h1>
-<p>Written by {frontmatter.author}</p>
+    <br>
+<h1 class="text-bold text-center text-5xl">{frontmatter.title}</h1>
+<br>
+<p class="text-end"><em>{frontmatter.description}</em></p>
+
+<p class="text-end">Written by {frontmatter.author}</p>
+<br>
 <NavBar />
 <slot />
 </Main>
