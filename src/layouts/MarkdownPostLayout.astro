@@ -8,8 +8,8 @@ const { frontmatter } = Astro.props;
 
 
   <Layout>
-      <article class="gradient-container mx-auto">
-          <main class="max-w-max mx-auto border border-gray-300 rounded-lg shadow-lg py-6 px-2">
+      <!-- <article class="mx-auto relative"> -->
+          <main class="main-content">
     <Main>
         <br />
       <h1 class="text-bold text-center text-5xl">{frontmatter.title}</h1>
@@ -21,5 +21,5 @@ const { frontmatter } = Astro.props;
       <slot />
     </Main>
 </main>
-</article>
+<!-- </article> -->
   </Layout>

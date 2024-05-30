@@ -1,24 +1,13 @@
-/* :root {
-  
-  font-size: 16px;
-  line-height: 1.75rem;
-  letter-spacing: 0.1rem;
-  background: rgb(34, 195, 188);
-  background: linear-gradient(
-    0deg,
-    rgba(34, 195, 188, 1) 0%,
-    rgba(191, 45, 253, 0.5830926120448179) 100%
-  );
-} */
-
-
 @font-face {
-  font-family: 'Lato', sans-serif;
-  src: url('/public/fonts/Lato-Regular.ttf') format('tff');
+  font-family: "Lato", sans-serif;
+  src: url("/public/fonts/Lato-Regular.ttf") format("tff");
   font-weight: normal;
   font-style: normal;
 
   font-display: swap;
+}
+* {
+  box-sizing: border-box;
 }
 :root {
   font-size: 16px;
@@ -36,48 +25,53 @@
   background-attachment: fixed;
 }
 
-html, body {
-  background: transparent;
-  font-family: 'Lato', sans-serif;
+html,
+body {
+  margin: 0 auto;
+  width: 100%;
   height: 100%;
-  /* background: linear-gradient(
-    0deg,
-    rgba(34, 195, 188, 1) 0%,
-    rgba(191, 45, 253, 0.583) 100%
-  ); */
+  font-family: "Lato", sans-serif;
+  max-width: 80ch;
+  padding: 1rem;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+  background: transparent;
+  font-family: "Lato", sans-serif;
+  height: 100%;
 }
-
-
-/* #content {
-  margin-top: 6rem;
-} */
 
 .header {
   position: relative;
-  /* margin-bottom: 6rem; */
-  /* justify-content: space-evenly; */
-  /* align-items: center; */
-  /* display: block; */
-  /* width: fit-content; */
-
-  /* top: 0;
-	left: 0;
-	right: 0; */
-
   font-weight: bold;
-  /* background: rgb(137, 6, 148); */
+  background: hsl(236deg 59% 90%) 0%;
   background-image: linear-gradient(
-  0deg,
-  hsl(236deg 59% 90%) 0%,
-  hsl(258deg 58% 82%) 50%,
-  hsl(281deg 56% 74%) 100%
-);
-backdrop-filter: blur(64px);
-opacity: 0.9;
-  /* background-clip: text; */
-  /* z-index: 20; */
-  /* box-shadow: 2px 12px 12px 2px rgba(0, 0, 255, 0.2); */
+    0deg,
+    hsl(236deg 59% 90%) 0%,
+    hsl(258deg 58% 82%) 50%,
+    hsl(281deg 56% 74%) 100%
+  );
+  backdrop-filter: blur(64px);
+  opacity: 0.9;
+  background-clip: text;
+  z-index: 20;
+  box-shadow: 2px 12px 12px 2px rgba(0, 0, 255, 0.2);
+}
 
+.main-content {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  box-shadow: 2px 12px 12px 2px rgba(0, 0, 255, 0.2);
+  padding: 1.5rem 0.5rem;
+  max-width: 100%;
+  width: fit-content;
+}
+@media (max-width: 932px) {
+  .main-content {
+    border: none;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    box-shadow: none;
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -127,7 +121,6 @@ opacity: 0.9;
   background-clip: text;
 }
 
-
 .Navbar {
   position: fixed;
   --tw-translate-y: -50%;
@@ -145,9 +138,13 @@ opacity: 0.9;
   flex-grow: 1;
   font-weight: bold;
   background: rgb(137, 6, 148);
-  background: linear-gradient(0deg, rgba(137, 6, 148, 1) 0%, rgba(87, 6, 249, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(137, 6, 148, 1) 0%,
+    rgba(87, 6, 249, 1) 100%
+  );
   background-clip: text;
-  z-index: 20;
+  z-index: 50;
   box-shadow: 2px 12px 12px 2px rgba(0, 0, 255, 0.2);
 }
 
@@ -189,21 +186,6 @@ opacity: 0.9;
   }
 }
 
-body {
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  font-family: 'Lato', sans-serif;
-  max-width: 80ch;
-  padding: 1rem;
-  line-height: 1.5;
-  transition: color 0.3s ease;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 .nav-links {
   /* width: full; */
   top: 5rem;
@@ -241,21 +223,21 @@ nav-links a:hover,
     top: 10%;
     right: 0;
     display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  /* width: full; */
-  font-weight: bold;
-  background: rgb(137, 6, 148);
-  background: linear-gradient(
-    0deg,
-    rgba(137, 6, 148, 1) 0%,
-    rgba(87, 6, 249, 1) 100%
-  );
-  background-clip: text;
-  z-index: 20;
-  box-shadow: 2px 12px 12px 2px rgba(0, 0, 255, 0.2);
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    /* width: full; */
+    font-weight: bold;
+    background: rgb(137, 6, 148);
+    background: linear-gradient(
+      0deg,
+      rgba(137, 6, 148, 1) 0%,
+      rgba(87, 6, 249, 1) 100%
+    );
+    background-clip: text;
+    z-index: 20;
+    box-shadow: 2px 12px 12px 2px rgba(0, 0, 255, 0.2);
     /* background: none; */
   }
 
