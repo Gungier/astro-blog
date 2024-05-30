@@ -6,17 +6,20 @@ import Main from "./Main.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<main class="container"></main>
-<Layout>
-    <Main>
-    <br>
-<h1 class="text-bold text-center text-5xl">{frontmatter.title}</h1>
-<br>
-<p class="text-end"><em>{frontmatter.description}</em></p>
 
-<p class="text-end">Written by {frontmatter.author}</p>
-<br>
-<NavBar />
-<slot />
-</Main>
-</Layout>
+  <Layout>
+      <article class="gradient-container mx-auto">
+          <main class="max-w-max mx-auto border border-gray-300 rounded-lg shadow-lg py-6 px-2">
+    <Main>
+        <br />
+      <h1 class="text-bold text-center text-5xl">{frontmatter.title}</h1>
+      <br />
+      <p class="text-end"><em>{frontmatter.description}</em></p>
+      <p class="text-end">Written by {frontmatter.author}</p>
+      <br />
+      <NavBar />
+      <slot />
+    </Main>
+</main>
+</article>
+  </Layout>

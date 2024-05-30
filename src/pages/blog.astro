@@ -2,18 +2,24 @@
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 import NavBar from "../components/NavBar.astro";
-import Navbar1 from "../components/Navbar1.astro";
 import Main from "../layouts/Main.astro";
+import BlogPost from "../components/BlogPost.astro";
 
+const allPosts = await Astro.glob("../pages/posts/*.md");
 const pageTitle = "Content will pass through here ...";
 ---
 
 <body>
-  <!-- <Header />  -->
   <Layout title={pageTitle}>
-  <Main>
-    <NavBar />
-  </Main>
-  <!-- <Navbar1 /> -->
+    <Main>
+      <NavBar />
+      <ul>
+        {
+          allPosts.map((post) => (
+            <BlogPost url={post.url} title={post.frontmatter.title} />
+          ))
+        }
+      </ul>
+    </Main>
   </Layout>
 </body>

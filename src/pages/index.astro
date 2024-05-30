@@ -3,31 +3,25 @@
 import Layout from "../layouts/Layout.astro";
 import Main from "../layouts/Main.astro";
 import ThreeDEarth from "../components/ui/_Rotation.tsx"; // Import React component
-import Scene from "../components/ui/FullEarthRotation.tsx";
 import StaryBackground from "../components/ui/StaryBackground.tsx";
-import Button from "../components/ui/Button.astro";
 import NavBar from "../components/NavBar.astro";
 import Navbar1 from "../components/Navbar1.astro";
 ---
 
-<main class="container">
-
-<Layout description="A community for sharing culture" title="Home">
-  <Main>
-    <NavBar />
-    <!-- <Navbar1 /> -->
-    
-
-    <StaryBackground client:load />
-  </Main>
-  <!-- Here you can include your React component -->
-  <section class="flex-grow flex justify-center items-center md:(flex px-10)">
-    <ThreeDEarth client:load />
-  </section>
-  <!-- <button type="button" id="toggleSimulationButton" class="bg-black-900 hover:bg-grey-700 text-white font-bold py-2 px-4 rounded inline-flex items-center border-2 border-black-900"
-  >Simulate Day/Night Cycle</button -->
-
-</Layout>
+<main>
+  <Layout description="A community for sharing culture">
+    <Main>
+      <NavBar />
+      <StaryBackground client:load />
+      <section
+        class="flex pt-10 w-full justify-center items-center md:(flex px-10)"
+      >
+        <ThreeDEarth client:load />
+      </section>
+      <!-- <button type="button" id="toggleSimulationButton" class="bg-black-900 hover:bg-grey-700 text-white font-bold py-2 px-4 rounded inline-flex items-center border-2 border-black-900"
+      >Simulate Day/Night Cycle</button -->
+    </Main>
+  </Layout>
 </main>
 
 <script>
