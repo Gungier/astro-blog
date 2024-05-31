@@ -2,17 +2,17 @@
 import { getEntry, type CollectionEntry } from "astro:content";
 import NavBar from "../components/NavBar.astro";
 import Navbar1 from "../components/Navbar1.astro";
-import AboutMe from "../content/blog/AboutMe.md";
+import aboutme from "../content/blog/aboutme.md";
 import Layout from "../layouts/Layout.astro";
 import Main from "../layouts/Main.astro";
 import "../styles/global.css";
 
 const pageTitle = "About Me";
 
-// const entry: CollectionEntry<any> = await getEntry('blog', 'AboutMe')
+// const entry: CollectionEntry<any> = await getEntry('blog', 'aboutme')
 // const Content = await (entry as any).render();
 
-// const about = await Astro.glob("../content/blog/AboutMe.md");
+// const about = await Astro.glob("../content/blog/aboutme.md");
 ---
 
 <!-- <main class="container"></main> -->
@@ -22,7 +22,7 @@ const pageTitle = "About Me";
     <Main>
     <NavBar />
 	<!-- <Navbar1 /> -->
-    <!-- <AboutMe /> -->
+    <!-- <aboutme /> -->
     <!-- <Content /> -->
   </Main>
   </Layout>
