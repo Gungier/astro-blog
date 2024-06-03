@@ -13,6 +13,7 @@ const pageTitle = "Content will pass through here ...";
   <Layout title={pageTitle}>
     <Main>
       <NavBar />
+      <div class="flex-col inline-flex overflow-y-auto">
       <ul>
         {
           allPosts.map((post) => (
@@ -20,6 +21,7 @@ const pageTitle = "Content will pass through here ...";
           ))
         }
       </ul>
+      </div>
     </Main>
   </Layout>
 </body>

@@ -5,7 +5,7 @@ description: 'A brief overview of what we offer'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
-tags: ["astro", "blogging", "learning in public"]
+tags: ["community", "life", "travel", "home", "family", "global"]
 
 title: "What We're About"
 author: "Lila Mendelsohn"

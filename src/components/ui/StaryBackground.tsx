@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
  * Renders a canvas with a starry background that changes depending on the time of day.
  * @returns {React.ReactElement} The rendered canvas.
  */
-const StaryBackground = (): JSX.Element => {
+const StaryBackground = (props: { className?: string }): JSX.Element => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [hour, setHour] = useState<number>(new Date().getHours());
   const [stateSimulate, setSimulate] = useState<boolean>(false);

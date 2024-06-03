@@ -9,17 +9,23 @@ const { frontmatter } = Astro.props;
 
   <Layout>
       <!-- <article class="mx-auto relative"> -->
-          <main class="main-content">
-    <Main>
-        <br />
-      <h1 class="text-bold text-center text-5xl">{frontmatter.title}</h1>
-      <br />
-      <p class="text-end"><em>{frontmatter.description}</em></p>
-      <p class="text-end">Written by {frontmatter.author}</p>
+        <main class="main-content overflow-y-auto">
+          <Main>
+            <br />
+            <h1 class="text-bold text-center text-5xl">{frontmatter.title}</h1>
+            <br />
+            <p class="text-end"><em>{frontmatter.description}</em></p>
+            <div class="flex-row inline-flex inset-x-0">
+              {frontmatter.tags.map((tag: unknown) => (
+                <p class="fit-content m-1 border-dotted rounded-lg p-1 text-base bg-white"><a class="text-blue-600" href={`/tags/${tag}`}>{tag}</a></p>
+              ))}
+            </div>
+            <p class="text-end">Written by {frontmatter.author}</p>
       <br />
       <NavBar />
       <slot />
     </Main>
+
 </main>
 <!-- </article> -->
   </Layout>

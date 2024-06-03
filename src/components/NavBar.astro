@@ -3,11 +3,7 @@
 // import { HoveredLink } from "../components/ui/NavBar";
 import Main from "../layouts/Main.astro";
 import StaryBackground from "../components/ui/StaryBackground";
-import {
-  Astronav,
-  MenuItems,
-  MenuIcon,
-} from "astro-navbar";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import "../styles/global.css";
 ---
 
@@ -51,10 +47,15 @@ import "../styles/global.css";
                   <button>
                     <a href="/blog/">Blog</a>
                   </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="/tags/">Tags</a>
+                  </button>
+                </li>
 
-                  <li>
-                    <a href="#">Contact</a>
-                  </li>
+                <li>
+                  <a href="#">Contact</a>
                 </li>
               </ul>
             </nav>
