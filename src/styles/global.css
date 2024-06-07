@@ -21,8 +21,7 @@
   );
   height: 100%;
   width: 100%;
-  min-width: fit-content;
-  min-height: fit-content;
+  
   background-size: cover;
   background-attachment: fixed;
 }
@@ -40,6 +39,8 @@ body {
   background: transparent;
   font-family: "Lato", sans-serif;
   height: 100%;
+  min-width: fit-content;
+  min-height: fit-content;
 }
 
 .header {
