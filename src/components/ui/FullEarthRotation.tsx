@@ -32,7 +32,7 @@ const Scene = () => {
       };
     }, []);
   
-    return <div ref={mountRef} style={{ width: '800px', height: '600px' }} />;
+    return <div ref={mountRef} style={{ width: '800px', height: '600px', maxHeight: '100vh', maxWidth: '100vw'}} />;
   };
   
   // Class component for the sphere

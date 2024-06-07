@@ -114,7 +114,7 @@ const StaryBackground = (props: { className?: string }): JSX.Element => {
     <canvas
       ref={canvasRef}
       style={{
-        position: "absolute",
+        position:"fixed",
         top: 0,
         left: 0,
         zIndex: -1,

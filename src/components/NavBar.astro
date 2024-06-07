@@ -5,6 +5,7 @@ import Main from "../layouts/Main.astro";
 import StaryBackground from "../components/ui/StaryBackground";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import "../styles/global.css";
+import MobileNav from "./MobileNav.astro";
 ---
 
 <!doctype html>
@@ -13,88 +14,114 @@ import "../styles/global.css";
     <meta charset="UTF-8" />
     <meta name="description" content="en" />
     <meta name="viewport" content="width=device-width" />
-    <!-- <title class="text-3xl">{title}</title> -->
   </head>
   <body id="root">
-    <div id="textColor">
+    <header id="textColor">
       <Main>
-        <!-- <div id="content"> -->
-        <!-- <slot /> -->
-
-        <!-- <Navigation /> -->
-        <!-- <HoveredLink client:only /> -->
-        <!-- <header class="lg:flex justify-between p-5 gap-5 mx-auto container"> -->
-        <!-- <div class="hamburger" id="hamburger"> -->
-        <Astronav closeOnClick>
-          <div class="flex w-full lg:w-auto justify-end">
-            <!-- <a>Your Logo</a> -->
-            <!-- <div class="lg:hidden">
-              <MenuIcon class="w-4 h-4 text-gray-800" />
-            </div> -->
-          </div>
+        <Astronav>
           <MenuItems class="Navbar hidden lg:flex">
-            <nav id="textColor">
-              <ul>
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>
-                  <button>
-                    <a href="/posts/aboutme/">About</a>
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    <a href="/blog/">Blog</a>
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    <a href="/tags/">Tags</a>
-                  </button>
-                </li>
+            <nav id="textColor" class="flex flex-col">
+              <a class={ Astro.url.pathname === '/' ? 'active' : ''} href="/">Home</a>
+              <a href="/posts/aboutme/">About</a>
 
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
+              <a href="/blog/">Blog</a>
+
+              <a href="/tags/">Tags</a>
+
+              <a href="#">Contact</a>
             </nav>
           </MenuItems>
+          <MobileNav />
         </Astronav>
-        <!-- </div> -->
-        <!-- <Astronav closeOnClick> -->
-        <!-- <section class="Navbar"> -->
-        <!-- <MenuItems class="Navbar" id="navbar"
-            
-          > -->
-        <!-- <div id="textColor" >
-              <ul >
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>
-                  <button >
-                    <a href="about">About</a>
-                  </button>
-                </li>
-                <li>
-                  <button >
-                    <a href="blog">Blog</a>
-                  </button>
-
-                  <li>
-                    <a href="#">Contact</a>
-                  </li>
-                </li>
-              </ul>
-            </div> -->
-        <!-- </MenuItems> -->
-
-        <!-- </section> -->
-        <!-- </Astronav> -->
-        <!-- </header> -->
       </Main>
-    </div>
+    </header>
     <!-- <script src="../utils/navToggle.ts"></script> -->
   </body>
 </html>
+
+<!-- <style>
+	header {
+		background-size: 250px;
+		background-color: var(--bg);
+		color: var(--fg);
+		padding: 0 0.5rem;
+		@media (--below_large) {
+			padding: 0;
+		}
+
+		&.transparent {
+			background: none;
+		}
+	}
+
+	.header-container {
+		display: grid;
+		padding: 10px 0;
+		align-items: center;
+		row-gap: 20px;
+		grid-template-columns: 88px auto;
+		margin: 0 auto;
+	}
+
+	.logo {
+		width: 58px;
+		@media (--above_med) {
+			width: auto;
+		}
+	}
+
+	nav a {
+		text-decoration: none;
+		color: var(--fg);
+		text-decoration: none;
+		white-space: nowrap;
+		border-bottom: solid 3px transparent;
+		transition: border-color 0.2s ease;
+		&:hover {
+			border-bottom: solid 3px var(--primary);
+		}
+	}
+
+	.desktop_nav {
+		display: flex;
+		padding: 10px 0;
+		gap: 10px;
+		@media (--below_large) {
+			gap: 5px;
+		}
+
+		justify-content: flex-end;
+		align-items: center;
+		.transparent & {
+			grid-column: 1 / -1;
+			justify-content: center;
+		}
+		a {
+			display: block;
+			text-decoration: none;
+			background: var(--nav_a_bg, rgba(255, 255, 255, 0.0786987545689));
+			padding: 10px 20px;
+			@media (--below_large) {
+				padding: 8px 16px;
+				font-size: var(--font-size-xs);
+			}
+			border: 0;
+			border-radius: 20px;
+			align-items: center;
+			display: none;
+			&:hover {
+				border: 0;
+				background: var(--primary);
+				color: var(--bg);
+			}
+			&.active {
+				background-color: var(--primary);
+				color: var(--bg);
+			}
+			@media (--above_med) {
+				display: block;
+			}
+		}
+	}
+</style> -->
+

@@ -38,19 +38,19 @@ const Earth = () => {
 
 const ThreeDEarth: React.FC = () => {
   return (
-    <div data-component="3d-earth-container">
+    <div className="earth-container">
       <Canvas
         style={{
           position: "relative",
           height: "50vh",
           width: "50vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          minWidth: "25vw",
-          minHeight: "25vh",
-          marginLeft: "36px",
-          marginTop: "36px",
+          // display: "flex",
+          // justifyContent: "center",
+          // alignItems: "center",
+          // minWidth: "25vw",
+          // minHeight: "25vh",
+          // marginLeft: "36px",
+          // marginTop: "36px",
         }}>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
